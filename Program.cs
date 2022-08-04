@@ -5,29 +5,31 @@ namespace FinalTestWork
     {
         public static void Main()
         {
-            Console.WriteLine("Введите несколько значений через пробел");
-            string? userInput = Console.ReadLine();
-            if (!string.IsNullOrEmpty(userInput))
+            Text.Menu();
+            ConsoleKeyInfo key = Console.ReadKey();
+            Console.Beep();
+            if (key.Key == ConsoleKey.D1)
             {
-                string[] strings = userInput.Split(' ');
-                string temp = string.Empty;
-                for (int i = 0; i < strings.Length; i++)
+                Text.ArrayExamples();
+                key = Console.ReadKey();
+                if (key.Key == ConsoleKey.D1)
                 {
-                    if (strings[i].Length <= 3 && strings[i] != " " && !string.IsNullOrEmpty(strings[i]))
-                    {
-                        if (i == strings.Length - 1) temp += strings[i];
-                        else temp += strings[i] + " ";
-                    }
+                    string[] strings = { "hello", "2", "world", ":-)" };
+                    Methods.ArrayFormation1(strings);
+                    Console.WriteLine($"\n{string.Join(" ", Methods.ArrayFormation1(strings))}");
+                    Console.WriteLine(Methods.ArrayFormation1(strings).Length);
                 }
-                string[] result = temp.Split(' ');
-                Console.WriteLine(string.Join(" ", result));
-                //Console.WriteLine($"\n{strings.Length}\t{result.Length}\t _{strings[2]}_\t_{result[2]}_");
-                // Console.WriteLine(string.Join("_", strings));
-                // Console.WriteLine(strings.Length);
-            }
-            else
-            {
-                Main();
+                if (key.Key == ConsoleKey.D2)
+                {
+                    string[] strings = { "1234", "1567", "-2", "computer science" };
+                    Methods.ArrayFormation1(strings);
+                    Console.WriteLine($"\n{string.Join(" ", Methods.ArrayFormation1(strings))}");
+                    Console.WriteLine(Methods.ArrayFormation1(strings).Length);
+                }
+                if (key.Key == ConsoleKey.D3)
+                {
+                    string[] strings = { "Russia", "Denmark", "Kazan" };
+                }
             }
         }
     }
