@@ -60,19 +60,20 @@ namespace FinalTestWork
                 case ConsoleKey.D3:
                     {
                         string[] strings = { "Russia", "Denmark", "Kazan" };
+
                         return strings;
                     }
 
                 default:
                     {
-                        ConsoleKeyInfo key1 = Console.ReadKey();
-                        Console.Beep();
-                        return ReadyArray(key1);
+                        goto case ConsoleKey.D1;
                     }
             }
         }
         public static void Solution(ConsoleKeyInfo key, string[] strings)
         {
+            Console.Clear();
+            Console.WriteLine($"\nYou have selected this array:\t[{string.Join(", ", strings)}]");
             switch (key.Key)
             {
                 case ConsoleKey.D1:
@@ -87,9 +88,10 @@ namespace FinalTestWork
                     }
                 default:
                     {
+                        Text.SelectOption();
                         key = Console.ReadKey();
                         Console.Beep();
-                        ReadyArray(key);
+                        Solution(key, strings);
                         break;
                     }
             }

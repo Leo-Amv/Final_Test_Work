@@ -15,13 +15,15 @@ namespace FinalTestWork
         public static void ArrayExamples()
         {
             Console.Clear();
-            Console.WriteLine("Select ready array example and press the corresponding key:");
+            Console.WriteLine("Select ready array example and press the corresponding key:" +
+                "\n\t(otherwise the first array will be used)");
             Console.WriteLine("\n[\"hello\", \"2\", \"world\", \":-)\"]\t\t\tkey:1");
             Console.WriteLine("\n[\"1234\", \"1567\", \"-2\", \"computer science\"]\tkey:2");
             Console.WriteLine("\n[\"Russia\", \"Denmark\", \"Kazan\"]\t\t\tkey:3\n");
         }
         public static void SelectOption()
         {
+            Console.Clear();
             Console.WriteLine(
                 "\nSelect solution and press the key:" +
                 "\nFirst option: \t key1" +
