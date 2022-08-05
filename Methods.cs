@@ -9,8 +9,8 @@ namespace FinalTestWork
             {
                 if (strings[i].Length <= 3 && strings[i] != " " && !string.IsNullOrEmpty(strings[i]))
                 {
-                    if (string.IsNullOrEmpty(temp)) temp += strings[i];
-                    else temp += " " + strings[i];
+                    if (string.IsNullOrEmpty(temp)) temp += "'" + strings[i] + "'";
+                    else temp += " " + "'" + strings[i] + "'";
                 }
             }
             return temp.Split(' ');
@@ -23,7 +23,7 @@ namespace FinalTestWork
             {
                 if (strings[i].Length <= 3 && strings[i] != " " && !string.IsNullOrEmpty(strings[i]))
                 {
-                    temp[size] = strings[i];
+                    temp[size] = "'" + strings[i] + "'";
                     size++;
                 }
             }
@@ -73,7 +73,7 @@ namespace FinalTestWork
         public static void Solution(ConsoleKeyInfo key, string[] strings)
         {
             Console.Clear();
-            Console.WriteLine($"\nYou have selected this array:\t[{string.Join(", ", strings)}]");
+            Console.WriteLine($"\nYou have received this array:\t\t[{string.Join(", ", strings)}]");
             switch (key.Key)
             {
                 case ConsoleKey.D1:
