@@ -7,14 +7,13 @@ namespace FinalTestWork
             string temp = string.Empty;
             for (int i = 0; i < strings.Length; i++)
             {
-                //if (strings[strings.Length - 1].Length > 3) Console.WriteLine();
                 if (strings[i].Length <= 3 && strings[i] != " " && !string.IsNullOrEmpty(strings[i]))
                 {
-                    if (i == strings.Length - 1) temp += strings[i];
-                    else temp += strings[i] + " ";
+                    if (string.IsNullOrEmpty(temp)) temp += strings[i];
+                    else temp += " " + strings[i];
                 }
             }
-            return temp.Split(' '); ;
+            return temp.Split(' ');
         }
         public static string[] ArrayFormation2(string[] strings)
         {
@@ -31,17 +30,68 @@ namespace FinalTestWork
             Array.Resize(ref temp, size);
             return temp;
         }
-        public static string UserInput()
+        public static string[] UserInput()
         {
-            Console.WriteLine("Введите несколько значений через пробел");
+            Console.WriteLine("\nEnter array values separated by spaces");
             string? input = Console.ReadLine();
             if (!string.IsNullOrEmpty(input))
             {
-                return input;
+                return input.Split(' ');
             }
             else
             {
                 return UserInput();
+            }
+        }
+        public static string[] ReadyArray(ConsoleKeyInfo key)
+        {
+            switch (key.Key)
+            {
+                case ConsoleKey.D1:
+                    {
+                        string[] strings = { "hello", "2", "world", ":-)" };
+                        return strings;
+                    }
+                case ConsoleKey.D2:
+                    {
+                        string[] strings = { "1234", "1567", "-2", "computer science" };
+                        return strings;
+                    }
+                case ConsoleKey.D3:
+                    {
+                        string[] strings = { "Russia", "Denmark", "Kazan" };
+                        return strings;
+                    }
+
+                default:
+                    {
+                        ConsoleKeyInfo key1 = Console.ReadKey();
+                        Console.Beep();
+                        return ReadyArray(key1);
+                    }
+            }
+        }
+        public static void Solution(ConsoleKeyInfo key, string[] strings)
+        {
+            switch (key.Key)
+            {
+                case ConsoleKey.D1:
+                    {
+                        Solutions.FirstOption(strings);
+                        break;
+                    }
+                case ConsoleKey.D2:
+                    {
+                        Solutions.SecondOption(strings);
+                        break;
+                    }
+                default:
+                    {
+                        key = Console.ReadKey();
+                        Console.Beep();
+                        ReadyArray(key);
+                        break;
+                    }
             }
         }
     }

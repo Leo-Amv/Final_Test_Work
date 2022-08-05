@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 namespace FinalTestWork
 {
     class Program
@@ -8,28 +9,30 @@ namespace FinalTestWork
             Text.Menu();
             ConsoleKeyInfo key = Console.ReadKey();
             Console.Beep();
-            if (key.Key == ConsoleKey.D1)
+            switch (key.Key)
             {
-                Text.ArrayExamples();
-                key = Console.ReadKey();
-                if (key.Key == ConsoleKey.D1)
-                {
-                    string[] strings = { "hello", "2", "world", ":-)" };
-                    Methods.ArrayFormation1(strings);
-                    Console.WriteLine($"\n{string.Join(" ", Methods.ArrayFormation1(strings))}");
-                    Console.WriteLine(Methods.ArrayFormation1(strings).Length);
-                }
-                if (key.Key == ConsoleKey.D2)
-                {
-                    string[] strings = { "1234", "1567", "-2", "computer science" };
-                    Methods.ArrayFormation1(strings);
-                    Console.WriteLine($"\n{string.Join(" ", Methods.ArrayFormation1(strings))}");
-                    Console.WriteLine(Methods.ArrayFormation1(strings).Length);
-                }
-                if (key.Key == ConsoleKey.D3)
-                {
-                    string[] strings = { "Russia", "Denmark", "Kazan" };
-                }
+                case ConsoleKey.D1:
+                    {
+                        Text.ArrayExamples();
+                        key = Console.ReadKey();
+                        Console.Beep();
+                        string[] strings = Methods.ReadyArray(key);
+                        Text.SelectOption();
+                        key = Console.ReadKey();
+                        Console.Beep();
+                        Methods.Solution(key, strings);
+                        break;
+                    }
+                case ConsoleKey.D2:
+                    {
+                        string[] strings = Methods.UserInput();
+                        Text.SelectOption();
+                        key = Console.ReadKey();
+                        Console.Beep();
+                        Methods.Solution(key, strings);
+                        break;
+                    }
+                default: Main(); break;
             }
         }
     }

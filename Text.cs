@@ -20,5 +20,12 @@ namespace FinalTestWork
             Console.WriteLine("\n[\"1234\", \"1567\", \"-2\", \"computer science\"]\tkey:2");
             Console.WriteLine("\n[\"Russia\", \"Denmark\", \"Kazan\"]\t\t\tkey:3\n");
         }
+        public static void SelectOption()
+        {
+            Console.WriteLine(
+                "\nSelect solution and press the key:" +
+                "\nFirst option: \t key1" +
+                "\nSecond option:\t key2");
+        }
     }
 }
