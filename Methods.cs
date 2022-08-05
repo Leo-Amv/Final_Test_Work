@@ -75,7 +75,7 @@ namespace FinalTestWork
                     }
             }
         }
-        public static void Solution(ConsoleKeyInfo key, string[] strings)
+        public static void DecisionChoise(ConsoleKeyInfo key, string[] strings)
         {
             Console.Clear();
             Console.Write($"\nYou have received this array:-------------------------------->");
@@ -100,7 +100,7 @@ namespace FinalTestWork
                         Text.SelectOption();
                         key = Console.ReadKey();
                         Console.Beep();
-                        Solution(key, strings);
+                        DecisionChoise(key, strings);
                         break;
                     }
             }

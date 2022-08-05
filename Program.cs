@@ -20,7 +20,7 @@ namespace FinalTestWork
                         Text.SelectOption();
                         key = Console.ReadKey();
                         Console.Beep();
-                        Methods.Solution(key, strings);
+                        Methods.DecisionChoise(key, strings);
                         break;
                     }
                 case ConsoleKey.D2:
@@ -29,7 +29,7 @@ namespace FinalTestWork
                         Text.SelectOption();
                         key = Console.ReadKey();
                         Console.Beep();
-                        Methods.Solution(key, strings);
+                        Methods.DecisionChoise(key, strings);
                         break;
                     }
                 default: Main(); break;
