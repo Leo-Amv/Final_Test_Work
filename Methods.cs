@@ -35,6 +35,10 @@ namespace FinalTestWork
                 return temp;
             }
         }
+        public static string[] ArrayFormation3(string[] strings)
+        {
+            return Array.FindAll(strings, x => x.Length <= 3 && x != " " && !string.IsNullOrEmpty(x));
+        }
         public static string[] UserInput()
         {
             Console.WriteLine("\nEnter array values separated by spaces");
