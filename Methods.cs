@@ -78,8 +78,11 @@ namespace FinalTestWork
         public static void Solution(ConsoleKeyInfo key, string[] strings)
         {
             Console.Clear();
-            Console.WriteLine($"\nYou have received this array:\t\t\t\t\t[{string.Join(", ", strings)}]");
-            Console.WriteLine($"\nArray length = {strings.Length}");
+            Console.Write($"\nYou have received this array:-------------------------------->");
+            Console.SetCursorPosition(64, 1);
+            Console.Write($"[{string.Join(", ", strings)}]");
+            Console.SetCursorPosition(64, 3);
+            Console.WriteLine($"Array length = {strings.Length}\n");
             switch (key.Key)
             {
                 case ConsoleKey.D1:
