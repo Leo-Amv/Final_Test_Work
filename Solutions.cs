@@ -9,6 +9,7 @@ namespace FinalTestWork
             time.Start();
             Console.WriteLine("\nAs a result of this solution, we got an array like this:\t" +
                 $"[{string.Join(", ", Methods.ArrayFormation1(strings))}]");
+            Console.WriteLine($"\nArray length = {Methods.ArrayFormation1(strings).Length}");
             time.Stop();
             Console.WriteLine("\nTime taken to complete this solution:\t" +
                 $"{time.Elapsed}\n");
@@ -18,6 +19,7 @@ namespace FinalTestWork
             time.Start();
             Console.WriteLine("\nAs a result of this solution, we got an array like this:\t" +
                 $"[{string.Join(", ", Methods.ArrayFormation2(strings))}]");
+            Console.WriteLine($"\nArray length = {Methods.ArrayFormation1(strings).Length}");
             time.Stop();
             Console.WriteLine("\nTime taken to complete this solution:\t" +
                 $"{time.Elapsed}\n");
