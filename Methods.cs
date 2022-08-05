@@ -41,6 +41,7 @@ namespace FinalTestWork
         }
         public static string[] UserInput()
         {
+            Console.Clear();
             Console.WriteLine("\nEnter array values separated by spaces");
             string? input = Console.ReadLine();
             if (!string.IsNullOrEmpty(input))
@@ -97,6 +98,11 @@ namespace FinalTestWork
                 case ConsoleKey.D2:
                     {
                         Solutions.SecondOption(strings);
+                        break;
+                    }
+                case ConsoleKey.D3:
+                    {
+                        Solutions.ThirdOption(strings);
                         break;
                     }
                 default:

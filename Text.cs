@@ -26,8 +26,9 @@ namespace FinalTestWork
             Console.Clear();
             Console.WriteLine(
                 "\nSelect solution and press the key:" +
-                "\n\n\tFirst option: \t key1" +
-                "\n\n\tSecond option:\t key2");
+                "\n\n\tFirst option:  \t key1" +
+                "\n\n\tSecond option: \t key2" +
+                "\n\n\tThird option:  \t key3");
         }
     }
 }
