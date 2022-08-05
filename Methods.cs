@@ -13,7 +13,8 @@ namespace FinalTestWork
                     else temp += " " + "'" + strings[i] + "'";
                 }
             }
-            return temp.Split(' ');
+            if (temp == string.Empty) return new string[0];
+            else return temp.Split(' ');
         }
         public static string[] ArrayFormation2(string[] strings)
         {
@@ -27,8 +28,12 @@ namespace FinalTestWork
                     size++;
                 }
             }
-            Array.Resize(ref temp, size);
-            return temp;
+            if (size == 0) return new string[0];
+            else
+            {
+                Array.Resize(ref temp, size);
+                return temp;
+            }
         }
         public static string[] UserInput()
         {
