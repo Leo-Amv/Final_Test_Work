@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Final_Test_Work</name>
+    </assembly>
+    <members>
+        <member name="ArrayFormation1">
+            <summary>
+            Вариант решения 1, создает пустую строку и заполняет её значениями через пробел из массива по условию,затем дробит эту строку на значения через пробел (получая массив строк)
+            </summary>
+            <param name="strings">Массив строк</param>
+            <returns>Массив из строк длиной меньше 3</returns>
+        </member>
+        <member name="ArrayFormation2">
+            <summary>
+            Вариант решения 2, создает массив длиной входящего массива, записывает в него значения из входящего массива по условию, затем обрезает полученный массив до правильного размера
+            </summary>
+            <param name="strings">Массив строк</param>
+            <returns>Массив из строк длиной меньше 3</returns>
+        </member>
+        <member name="ArrayFormation3">
+            <summary>
+            Вариант решения 3, в одну строчку с помощью метода Array.FindAll находит значения в массиве по условию
+            </summary>
+            <param name="strings">Массив строк</param>
+            <returns>Массив из строк длиной меньше 3</returns>
+        </member>
+        <member name="UserInput">
+            <summary>
+            Метод просит ввести в строке вручную значения массива через пробел, не дает ввести пустую строку путем проверки и рекурсии, затем дробит эту строку на значения через пробел (получая массив строк)
+            </summary>
+            <returns>Массив строк</returns>
+        </member>
+        <member name="ReadyArray">
+            <summary>
+            Метод создает готовые варианты массива строк в зависимости от нажатой клавиши(всего 3 варианта за стандартное значение берется первый вариант)
+            </summary>
+            <param name="key">Нажатая клавиша клавиатуры</param>
+            <returns>Массив строк</returns>
+        </member>
+        <member name="SolutionChoise">
+            <summary>
+            Метод выводит в консоль полученный массив и его длину, затем в зависимости от нажатой клавиши выводит вариант решения задачи
+            </summary>
+            <param name="key">Нажатая клавиша</param>
+            <param name="strings">Массив строк</param>
+        </member>
+        <member name="SolutionOption">
+            <summary>
+            Метод в зависимости от нажатой клавиши создает массив полагаясь на вариант решения, затем выводит в консоль этот массив, его длину и время выполнения этого решения
+            </summary>
+            <param name="key">Нажатая клавиша</param>
+            <param name="strings">Массив строк</param>
+        </member>
+        <member name="Menu">
+            <summary>
+            Метод выводит текст меню в консоль и просит выбрать пункт меню
+            </summary>
+        </member>
+        <member name="ArrayExamples">
+            <summary>
+            Метод предоставляет выбор в консоли из предложенных вариантов массивов
+            </summary>
+        </member>
+        <member name="SelectOption">
+            <summary>
+            Метод предоставляет выбор в консоли варианты решения задачи
+            </summary>
+        </member>
+    </members>
+</doc>

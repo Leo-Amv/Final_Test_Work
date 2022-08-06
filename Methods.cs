@@ -2,6 +2,7 @@ namespace FinalTestWork
 {
     class Methods
     {
+        ///<include file ='info.xml' path='doc/members/member[@name="ArrayFormation1"]'/>
         public static string[] ArrayFormation1(string[] strings)
         {
             string temp = string.Empty;
@@ -16,6 +17,7 @@ namespace FinalTestWork
             if (temp == string.Empty) return new string[0];
             else return temp.Split(' ');
         }
+        ///<include file ='info.xml' path='doc/members/member[@name="ArrayFormation2"]'/>
         public static string[] ArrayFormation2(string[] strings)
         {
             string[] temp = new string[strings.Length];
@@ -35,10 +37,12 @@ namespace FinalTestWork
                 return temp;
             }
         }
+        ///<include file ='info.xml' path='doc/members/member[@name="ArrayFormation3"]'/>
         public static string[] ArrayFormation3(string[] strings)
         {
             return Array.FindAll(strings, x => x.Length <= 3 && x != " " && !string.IsNullOrEmpty(x));
         }
+        ///<include file ='info.xml' path='doc/members/member[@name="UserInput"]'/>
         public static string[] UserInput()
         {
             Console.Clear();
@@ -53,6 +57,7 @@ namespace FinalTestWork
                 return UserInput();
             }
         }
+        ///<include file ='info.xml' path='doc/members/member[@name="ReadyArray"]'/>
         public static string[] ReadyArray(ConsoleKeyInfo key)
         {
             switch (key.Key)
@@ -77,41 +82,6 @@ namespace FinalTestWork
                 default:
                     {
                         goto case ConsoleKey.D1;
-                    }
-            }
-        }
-        public static void DecisionChoise(ConsoleKeyInfo key, string[] strings)
-        {
-            Console.Clear();
-            Console.Write($"\nYou have received this array:-------------------------------->");
-            Console.SetCursorPosition(64, 1);
-            Console.Write($"[{string.Join(", ", strings)}]");
-            Console.SetCursorPosition(64, 3);
-            Console.WriteLine($"Array length = {strings.Length}\n");
-            switch (key.Key)
-            {
-                case ConsoleKey.D1:
-                    {
-                        Solutions.FirstOption(strings);
-                        break;
-                    }
-                case ConsoleKey.D2:
-                    {
-                        Solutions.SecondOption(strings);
-                        break;
-                    }
-                case ConsoleKey.D3:
-                    {
-                        Solutions.ThirdOption(strings);
-                        break;
-                    }
-                default:
-                    {
-                        Text.SelectOption();
-                        key = Console.ReadKey();
-                        Console.Beep();
-                        DecisionChoise(key, strings);
-                        break;
                     }
             }
         }
