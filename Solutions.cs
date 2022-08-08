@@ -8,10 +8,13 @@ namespace FinalTestWork
         public static void SolutionChoise(ConsoleKeyInfo key, string[] strings)
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Red;
             Console.Write($"\nYou have received this array:-------------------------------->");
             Console.SetCursorPosition(64, 1);
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.Write($"[{string.Join(", ", strings)}]");
             Console.SetCursorPosition(64, 3);
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine($"Array length = {strings.Length}\n");
             switch (key.Key)
             {
@@ -48,11 +51,15 @@ namespace FinalTestWork
             if (key.Key == ConsoleKey.D2) temp = Methods.ArrayFormation2(strings);
             if (key.Key == ConsoleKey.D3) temp = Methods.ArrayFormation3(strings);
             time.Start();
-            Console.WriteLine("\nAs a result of this solution, we got an array like this:----->  " +
-                $"[{string.Join(", ", temp)}]");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("\nAs a result of this solution, we got an array like this:----->  ");
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.WriteLine($"[{string.Join(", ", temp)}]");
             Console.SetCursorPosition(64, 8);
+            Console.ForegroundColor = ConsoleColor.Blue;
             Console.WriteLine($"Array length = {temp.Length}");
             time.Stop();
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
             Console.WriteLine("\nTime taken to complete this solution:\t" +
                 $"{time.Elapsed}\n");
         }

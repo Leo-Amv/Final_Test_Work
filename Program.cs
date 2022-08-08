@@ -22,7 +22,13 @@ namespace FinalTestWork
                         key = Console.ReadKey();
                         Console.Beep();
                         Solutions.SolutionChoise(key, strings);
-                        Thread.Sleep(TimeSpan.FromSeconds(5));
+                        for (int i = 1; i <= 11; i++)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Black;
+                            Console.SetCursorPosition(0, 11);
+                            Console.WriteLine($"\nTHE PROGRAM WILL CLOSE IN : {11 - i} SECONDS ");
+                            Thread.Sleep(TimeSpan.FromSeconds(1));
+                        }
                         break;
                     }
                 case ConsoleKey.D2:
@@ -32,7 +38,13 @@ namespace FinalTestWork
                         key = Console.ReadKey();
                         Console.Beep();
                         Solutions.SolutionChoise(key, strings);
-                        Thread.Sleep(TimeSpan.FromSeconds(5));
+                        for (int i = 1; i <= 11; i++)
+                        {
+                            Console.ForegroundColor = ConsoleColor.Black;
+                            Console.SetCursorPosition(0, 11);
+                            Console.WriteLine($"\nTHE PROGRAM WILL CLOSE IN : {11 - i} SECONDS ");
+                            Thread.Sleep(TimeSpan.FromSeconds(1));
+                        }
                         break;
                     }
                 default: Main(); break;
